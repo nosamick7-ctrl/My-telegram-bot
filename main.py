@@ -126,16 +126,17 @@ def main_menu_markup():
     return markup
 
 
-def back_markup():
     markup = types.InlineKeyboardMarkup()
-
     markup.add(
         types.InlineKeyboardButton(
-            "⬅️️ Back",
+            "🔄 Refresh Number",
+            callback_data="refresh_number"
+        ),
+        types.InlineKeyboardButton(
+            "⬅️ Back",
             callback_data="main_menu"
         )
     )
-
     return markup
 
 
