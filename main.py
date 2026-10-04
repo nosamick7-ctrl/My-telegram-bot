@@ -5,11 +5,11 @@ bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "Welcome!")
+    bot.reply_to(message, "which kain number you fey find!")
 
 @bot.message_handler(commands=['get_number'])
 def handle_get_number(message):
-    bot.reply_to(message, "Your number is ready.")
+    bot.reply_to(message, "baba go work.")
 
 bot.infinity_polling()
 
