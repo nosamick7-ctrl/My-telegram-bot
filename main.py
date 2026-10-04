@@ -5,7 +5,7 @@ bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "which kain number you fey find!")
+    bot.reply_to(message, "welcome baby what can i help you with!")
 
 @bot.message_handler(commands=['get_number'])
 def handle_get_number(message):
