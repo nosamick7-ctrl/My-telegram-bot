@@ -54,7 +54,7 @@ bot = telebot.TeleBot(API_TOKEN)
 # TEST NUMBERS
 # =========================
 
-Nigeria🇳🇬 = [
+Nigeria = [
     "2348022215551",
     "2348022254679",
     "2348022612707",
@@ -235,7 +235,7 @@ def send_welcome(message):
 
 @bot.message_handler(commands=["get_number"])
 def handle_get_number(message):
-    chosen_number = random.choice(Nigeria🇳🇬)
+    chosen_number = random.choice(Nigeria)
 
     bot.send_message(
         message.chat.id,
