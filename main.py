@@ -360,6 +360,12 @@ def unknown_message(message):
 # =========================
 # START BOT
 # =========================
+@bot.message_handler(content_types=['document'])
+def handle_document(message):
+    file_info = bot.get_file(message.document.file_id)
+    downloaded_file = bot.download_file(file_info.file_path)
+    # Process file contents here
+    bot.reply_to(message, "File received!")
 
 if __name__ == "__main__":
     server_thread = threading.Thread(
